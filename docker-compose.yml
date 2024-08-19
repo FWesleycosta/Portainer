@@ -1,10 +1,13 @@
-version: '3.7'
-
 services:
   portainer:
     container_name: portainer
+    hostname: portainer
     image: portainer/portainer-ce:latest
     restart: unless-stopped
+    environment:
+      - TZ=America/Sao_Paulo
+    tty: true
+    pull_policy: always
     security_opt:
       - no-new-privileges:true
     volumes:
@@ -13,3 +16,14 @@ services:
       - ./portainer-data:/data
     ports:
       - 9000:9000
+    networks:
+      - portainer
+
+volumes:
+  portainer-data:
+      driver: local
+
+networks:
+    portainer:
+        driver: bridge
+

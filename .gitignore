@@ -1,0 +1,8 @@
+# Directory for project files
+.idea
+.env
+node_modules
+.DS_Store
+.gitattributes
+.vscode
+portainer-data
