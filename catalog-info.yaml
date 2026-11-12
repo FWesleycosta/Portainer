@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: portainer
+  title: Portainer
+  description: "Docker Compose para subir o Portainer e gerenciar ambientes Docker e Kubernetes por interface web."
+  tags:
+    - docker
+    - docker-compose
+    - portainer
+  annotations:
+    github.com/project-slug: FWesleycosta/Portainer
+spec:
+  type: infrastructure
+  lifecycle: production
+  owner: fwesleycosta
+  system: automacao
